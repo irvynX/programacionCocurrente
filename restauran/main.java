@@ -2,6 +2,8 @@ package restauran;
 
 public class main {
     public static void main(String[] args) {
+        int[] estado = {0,0};
+        int op = 0;
         Mesero mesero[]=new Mesero[2];
         Mesero barman[]=new Mesero[2];
         Cliente cliente[]=new Cliente[2];
@@ -14,6 +16,10 @@ public class main {
 
         cliente[0]= new Cliente();
         cliente[1]= new Cliente();
+
+        while (op != 100) {
+            System.out.println("para salir en cualquier momento elige como opcion 100");
+        }
 
         System.out.println(mesero[0].menu());
         System.out.println(mesero[0].getId());
