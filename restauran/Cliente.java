@@ -3,10 +3,13 @@ import java.util.Scanner;
 
 public class Cliente {
     // atributos
-    private int cuenta = 0;
-    public int tiempoEspera = 0;
-    private int numMeseros = 0;
-    private int[] meseros = {0,0,0};
+    public int cuenta = 0;
+    public int tiempoEsperaM = 0;
+    public int tiempoEsperaB = 0;
+    public int numMesero = 0;
+    public int numPedidoM = 0;
+    public int numPedidoB = 0;
+    public int numBarman = 0;
     Scanner entrada = new Scanner(System.in);
 
     public Cliente() {
@@ -14,17 +17,33 @@ public class Cliente {
 
     // metodos
 
-    public void meseroAtendiendote(String tipo,String nombre, int id){
-        if(numMeseros <= 2){
-            System.out.println("soy el " + tipo + " " + nombre + "y sera un placer atenderlo");
-            meseros[numMeseros] = id;
-            numMeseros++;
+    public void meseroAtendiendote(String nombre, int id){
+        if(numMesero == 0){
+            System.out.println("soy " + nombre + "y sera un placer atenderlo");
+            numMesero = id;
         } else{
             System.out.println("veo que mis compañeros ya lo estan atendiendo");
         }
     }
 
-    public void cuenta(int num){
+    public void entregaM(int num,String nom){
+        System.out.println(nom + "(Mesero): aqui esta lo que ordeno. si desea algo mas puede llamarme");
+        numMesero = 0;
+        cuenta = cuenta + num;
+    }
+
+    public void barmanAtendiendote(String nombre, int id){
+        if(numBarman == 0){
+            System.out.println("soy " + nombre + "y sera un placer atenderlo");
+            numBarman = id;
+        } else{
+            System.out.println("veo que mis compañeros ya lo estan atendiendo");
+        }
+    }
+
+    public void entregaBarman(int num,String nom){
+        System.out.println(nom + "(Barman:) aqui esta lo que ordeno. si desea algo mas puede llamarme");
+        numBarman = 0;
         cuenta = cuenta + num;
     }
 
@@ -36,9 +55,13 @@ public class Cliente {
             pagar = entrada.nextInt();
         }
         if (pagar > cuenta){
-            System.out.print("esperamos que tenga un buen dia y vuelva pronto :)");
-        }else{
+            System.out.println("esperamos que tenga un buen dia.Vuelva pronto :)");
+            cuenta = 0;
+        }else if (pagar == cuenta){
             System.out.println("..........(el mesero no dice nada)");
+            cuenta = 0;
+        }else{
+            System.out.println("creo que no me alcanza con esto");
         }
     }
 }
