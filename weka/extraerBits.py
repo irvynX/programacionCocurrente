@@ -1,7 +1,8 @@
 from PIL import Image
 
 # Abre la imagen
-img = Image.open("imagen.png")
+img = Image.open("1.1.png")
+imgOut = Image.new("RGB", img.size, (828,467))
 
 # Obtiene la anchura y altura de la imagen
 width, height = img.size
@@ -17,7 +18,12 @@ for x in range(width):
     for y in range(height):
         if alpha_channel:
             r, g, b, a = img.getpixel((x,y))
-            print("Pixel en x=", x, " y=", y, " R=", r, " G=", g, " B=", b, " A=", a)
+            imgOut.putpixel((x,y), (r, 0, 0))
+            #print("Pixel en x=", x, " y=", y, " R=", r, " G=", g, " B=", b, " A=", a)
         else:
             r, g, b = img.getpixel((x,y))
-            print("Pixel en x=", x, " y=", y, " R=", r, " G=", g, " B=", b)
+            imgOut.putpixel((x,y), (r, 0, 0))
+            #print("Pixel en x=", x, " y=", y, " R=", r, " G=", g, " B=", b)
+
+#guardar imagen
+img.save("salida1.png")
