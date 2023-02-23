@@ -18,12 +18,18 @@ else:
 for x in range(width):
     for y in range(height):
         if alpha_channel:
-            r, g, b, a = img.getpixel((x,y))
-            imgOut.putpixel((x, y), (r, 0, 0))
+            #r, g, b, a = img.getpixel((x,y))
+            g = 0
+            b = 0
+            r = img.getpixel((x, y))
+            imgOut.putpixel((x, y), (r, g, b))
             #print("Pixel en x=", x, " y=", y, " R=", r, " G=", g, " B=", b, " A=", a)
         else:
-            r, g, b = img.getpixel((x,y))
-            imgOut.putpixel((x,y), (r, 0, 0))
+            #r, g, b = img.getpixel((x,y))
+            g = 0
+            b = 0
+            r = img.getpixel((x, y))
+            imgOut.putpixel((x,y), (r, g, b))
             #print("Pixel en x=", x, " y=", y, " R=", r, " G=", g, " B=", b)
 
 #guardar imagen
