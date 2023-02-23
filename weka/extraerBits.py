@@ -1,36 +1,26 @@
 from PIL import Image
 
-# Abre la imagen
-img = Image.open("1.1.png")
-imgOut = Image.new('RGB', (830, 469), color='black')
+# Abre la imagen y conviértela en modo "RGB"
+img = Image.open("1.1.png").convert("RGB")
+imgOut = image.new('RGB',(830,469),color='black')
 
-
-# Obtiene la anchura y altura de la imagen
+# Obtiene el ancho y el alto de la imagen
 width, height = img.size
 
-# Verifica si la imagen tiene un canal alfa
-if img.mode in ("RGBA", "LA") or (img.mode == "P" and "transparency" in img.info):
-    alpha_channel = True
-else:
-    alpha_channel = False
+# Crea una lista para almacenar los valores de rojo de los píxeles
+red_values = []
 
-# Itera sobre cada pixel y extrae el valor RGB
-for x in range(width):
-    for y in range(height):
-        if alpha_channel:
-            #r, g, b, a = img.getpixel((x,y))
-            g = 0
-            b = 0
-            r = img.getpixel((x, y))
-            imgOut.putpixel((x, y), (r, g, b))
-            #print("Pixel en x=", x, " y=", y, " R=", r, " G=", g, " B=", b, " A=", a)
-        else:
-            #r, g, b = img.getpixel((x,y))
-            g = 0
-            b = 0
-            r = img.getpixel((x, y))
-            imgOut.putpixel((x,y), (r, g, b))
-            #print("Pixel en x=", x, " y=", y, " R=", r, " G=", g, " B=", b)
+# Itera sobre todos los píxeles de la imagen y agrega el valor de rojo a la lista
+for y in range(height):
+    for x in range(width):
+        r, g, b = img.getpixel((x, y))
+        red_values.append(r)
 
-#guardar imagen
-img.save("salida1.png")
+i = 0
+for y in range(height):
+    for x in range(width):
+        imgOut.putpixel((x, y),(red values[i], 0, 0))
+        i = i + 1
+# Imprime los valores de rojo de los primeros 10 píxeles
+print(red_values[:10])
+imgOut.save("salida1.png")
