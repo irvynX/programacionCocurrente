@@ -85,6 +85,7 @@ for z in range(1, 3):
 
     # Imprime los valores de rojo de los primeros 10 píxeles
     #print(red_values[:10])
+    
     imgOut1.save(str(z) + "salida1.png")
     imgOut2.save(str(z) + "salida2.png")
     imgOut3.save(str(z) + "salida3.png")
