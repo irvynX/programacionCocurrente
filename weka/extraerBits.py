@@ -1,4 +1,5 @@
 from PIL import Image
+import statistics
 
 dirO = "imgO/o"
 dirM = "imgM/m"
@@ -43,6 +44,8 @@ for z in range(1, 3):
     red4 = []
     green4 = []
     blue4 = []
+
+    varianza = []
     # Itera sobre todos los píxeles de la imagen y agrega el valor de rojo a la lista
     for y in range(height):
         for x in range(width):
@@ -82,9 +85,30 @@ for z in range(1, 3):
                 imgOut2.putpixel((x, y),(0, 0, 0))
                 imgOut3.putpixel((x, y),(0, 0, 0))
                 imgOut4.putpixel((x, y),(r, g, b))
-
-    # Imprime los valores de rojo de los primeros 10 píxeles
-    #print(red_values[:10])
+    print(statistics.variance(red1))
+    print(statistics.variance(red2))
+    print(statistics.variance(red3))
+    print(statistics.variance(red4))
+    print(statistics.variance(blue1))
+    print(statistics.variance(blue2))
+    print(statistics.variance(blue3))
+    print(statistics.variance(blue4))
+    print(statistics.variance(green1))
+    print(statistics.variance(green2))
+    print(statistics.variance(green3))
+    print(statistics.variance(green4))
+    red1 = []
+    red2 = []
+    red3 = []
+    red4 = []
+    green1 = []
+    green2 = []
+    green3 = []
+    green4 = []
+    blue1 = []
+    blue2 = []
+    blue3 = []
+    blue4 = []
     
     imgOut1.save(str(z) + "salida1.png")
     imgOut2.save(str(z) + "salida2.png")
