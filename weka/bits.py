@@ -3,7 +3,6 @@ import statistics
 import glob
 import numpy as np
 import os
-import matplotlib.pyplot as plt
 
 dirO = "imgO/img"
 dirM = "imgM/m"
