@@ -1,17 +1,18 @@
 from PIL import Image
 import statistics
+import glob
 
-dirO = "imgO/o"
+dirO = "imgO/img"
 dirM = "imgM/m"
 punto = ".png"
 numM = 1
-for z in range(1, 3):
-    # Abre la imagen y conviértela en modo "RGB"
-    #img = Image.open("1.3.png").convert("RGB")
-    direcO = dirO + str(z) + punto
-    direcM = dirM + str(numM) + punto
+for posOrig in range(1, 2):
+    # Abre la imagen original y recupera sus mascaras
+    direcO = dirO + str(posOrig) + punto
+    direcM = glob.glob(dirM + str(posOrig) + '/*')
+    numMascaras = len(direcM)
     imgO = Image.open(direcO).convert("RGB")
-    imgM1 = Image.open(direcM).convert("RGB")
+    imgM = Image.open(direcM[0]).convert("RGB")
     numM = numM + 1
     direcM = dirM + str(numM) + punto
     imgM2 = Image.open(direcM).convert("RGB")
