@@ -36,7 +36,7 @@ for posOrig in range(1, 3):
         elif os.path.basename(direcM[i]) == 'h.png':
             clasificador = 'humo'
         else:
-            clasificador = 'nada'
+            clasificador = 'no fuego'
         #nombre_archivo = os.path.basename(direcM[i])
 
         #obtenemos el tamaño de la imagen

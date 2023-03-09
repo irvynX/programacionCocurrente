@@ -1,9 +1,9 @@
 package lavaraAutos;
 
-public class terminarAspirar extends Thread {
+public class tapetes extends Thread {
     public void run(){
         try {
-            System.out.println("Auto aspirado <------------");
+            System.out.println("Tengo los tapetes");
         } catch (Exception e) {
             // TODO: handle exception
         }
