@@ -4,8 +4,12 @@ import glob
 import numpy as np
 import os
 
+# mascara amarilla = 128,128,0 (no incendio)
+# mascara roja = 128,0,0 (incendio)
+# mascara verde = 0,128,0 (humo)
+
 dirO = "imgO/img"
-dirM = "imgM/m"
+dirM = "imgM"
 punto = ".png"
 
 
@@ -19,9 +23,11 @@ contrMax = 0.0
 colorMax = 0.0
 energMax = 0.0
 clasificador = ""
+
 for posOrig in range(1, 3):
     # Abre la imagen original y recupera sus mascaras
     imgO = Image.open(dirO + str(posOrig) + punto).convert("RGB")
+    imgL = Image.open(dirO + str(posOrig) + punto).convert("L")
     #recupera las mascaras
     direcM = glob.glob(dirM + str(posOrig) + '/*')
     numMascaras = len(direcM)
