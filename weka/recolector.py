@@ -119,6 +119,9 @@ for i in range(0, len(dirOrig)):
         
         # Calcular la desviación estándar de los valores de píxeles
         desviacion = statistics.stdev(maskArray)
+        desviacionR = statistics.stdev(redIncendio)
+        desviacionG = statistics.stdev(greenIncendio)
+        desviacionB = statistics.stdev(blueIncendio)
         
 
         # Calcular el contraste como el valor máximo menos el valor mínimo dividido por la desviación estándar
@@ -129,7 +132,7 @@ for i in range(0, len(dirOrig)):
         mediaG = statistics.mean(greenIncendio)
         mediaB = statistics.mean(blueIncendio)
 
-        if (colorMini > mediaR):
+        """if (colorMini > mediaR):
             colorMini = mediaR
         if (colorMini > mediaG):
             colorMini = mediaG
@@ -149,8 +152,12 @@ for i in range(0, len(dirOrig)):
             contrMini = contraste
         if (energMini > energia):
             energMini = energia
-        if (desviMini > desviacion):
-            desviMini = desviacion
+        if (desviMini > desviacionR):
+            desviMini = desviacionR
+        if (desviMini > desviacionG):
+            desviMini = desviacionG
+        if (desviMini > desviacionB):
+            desviMini = desviacionB
 
         if (variaMax < variance):
             variaMax = variance
@@ -158,17 +165,78 @@ for i in range(0, len(dirOrig)):
             contrMax = contraste
         if (energMax < energia):
             energMax = energia
-        if (desviMax < desviacion):
-            desviMax = desviacion
+        if (desviMax < desviacionR):
+            desviMax = desviacionR
+        if (desviMax < desviacionG):
+            desviMax = desviacionG
+        if (desviMax < desviacionB):
+            desviMax = desviacionB"""
 
         #guardamos datos
-        datosTemporal.append(mediaR)
-        datosTemporal.append(mediaG)
-        datosTemporal.append(mediaB)
-        datosTemporal.append(energia)
-        datosTemporal.append(desviacion)
-        datosTemporal.append(contraste)
-        datosTemporal.append(variance)
+        if (mediaR <= 85):
+            datosTemporal.append('bajo')
+        if (mediaR > 85 and mediaR < 170):
+            datosTemporal.append('medio')
+        if (mediaR >= 170):
+            datosTemporal.append('alto')
+
+        if (mediaG <= 85):
+            datosTemporal.append('bajo')
+        if (mediaG > 85 and mediaG < 170):
+            datosTemporal.append('medio')
+        if (mediaG >= 170):
+            datosTemporal.append('alto')
+
+        if (mediaB <= 85):
+            datosTemporal.append('bajo')
+        if (mediaB > 85 and mediaB < 170):
+            datosTemporal.append('medio')
+        if (mediaB >= 170):
+            datosTemporal.append('alto')
+
+        if (desviacionR <= 28):
+            datosTemporal.append('bajo')
+        if (desviacionR > 28 and desviacionR < 50):
+            datosTemporal.append('medio')
+        if (desviacionR >= 50):
+            datosTemporal.append('alto')
+            
+        if (desviacionG <= 28):
+            datosTemporal.append('bajo')
+        if (desviacionG > 28 and desviacionG < 50):
+            datosTemporal.append('medio')
+        if (desviacionG >= 50):
+            datosTemporal.append('alto')
+
+        if (desviacionB <= 28):
+            datosTemporal.append('bajo')
+        if (desviacionB > 28 and desviacionB < 50):
+            datosTemporal.append('medio')
+        if (desviacionB >= 50):
+            datosTemporal.append('alto')
+        
+        if (energia <= 100000):
+            datosTemporal.append('bajo')
+        if (energia > 100000 and energia < 200000):
+            datosTemporal.append('medio')
+        if (energia >= 200000):
+            datosTemporal.append('alto')
+
+        if (contraste <= 0.030):
+            datosTemporal.append('bajo')
+        if (contraste > 0.030 and contraste < 0.045):
+            datosTemporal.append('medio')
+        if (contraste >= 0.045):
+            datosTemporal.append('alto')
+
+        if (variance <= 0.01672):
+            datosTemporal.append('bajo')
+        if (variance > 0.01672 and variance < 0.03249):
+            datosTemporal.append('medio')
+        if (variance >= 0.03249):
+            datosTemporal.append('alto')
+
+        #mascara roja
         datosTemporal.append('incendio')
 
         datos.append(datosTemporal)
@@ -204,6 +272,9 @@ for i in range(0, len(dirOrig)):
         
         # Calcular la desviación estándar de los valores de píxeles
         desviacion = statistics.stdev(maskArray)
+        desviacionR = statistics.stdev(redNoIncendio)
+        desviacionG = statistics.stdev(greenNoIncendio)
+        desviacionB = statistics.stdev(blueNoIncendio)
         
 
         # Calcular el contraste como el valor máximo menos el valor mínimo dividido por la desviación estándar
@@ -214,7 +285,7 @@ for i in range(0, len(dirOrig)):
         mediaG = statistics.mean(greenHumo)
         mediaB = statistics.mean(blueHumo)
 
-        if (colorMini > mediaR):
+        """if (colorMini > mediaR):
             colorMini = mediaR
         if (colorMini > mediaG):
             colorMini = mediaG
@@ -234,8 +305,12 @@ for i in range(0, len(dirOrig)):
             contrMini = contraste
         if (energMini > energia):
             energMini = energia
-        if (desviMini > desviacion):
-            desviMini = desviacion
+        if (desviMini > desviacionR):
+            desviMini = desviacionR
+        if (desviMini > desviacionG):
+            desviMini = desviacionG
+        if (desviMini > desviacionB):
+            desviMini = desviacionB
 
         if (variaMax < variance):
             variaMax = variance
@@ -243,17 +318,78 @@ for i in range(0, len(dirOrig)):
             contrMax = contraste
         if (energMax < energia):
             energMax = energia
-        if (desviMax < desviacion):
-            desviMax = desviacion
+        if (desviMax < desviacionR):
+            desviMax = desviacionR
+        if (desviMax < desviacionG):
+            desviMax = desviacionG
+        if (desviMax < desviacionB):
+            desviMax = desviacionB"""
 
         #guardamos datos
-        datosTemporal.append(mediaR)
-        datosTemporal.append(mediaG)
-        datosTemporal.append(mediaB)
-        datosTemporal.append(energia)
-        datosTemporal.append(desviacion)
-        datosTemporal.append(contraste)
-        datosTemporal.append(variance)
+        if (mediaR <= 85):
+            datosTemporal.append('bajo')
+        if (mediaR > 85 and mediaR < 170):
+            datosTemporal.append('medio')
+        if (mediaR >= 170):
+            datosTemporal.append('alto')
+            
+        if (mediaG <= 85):
+            datosTemporal.append('bajo')
+        if (mediaG > 85 and mediaG < 170):
+            datosTemporal.append('medio')
+        if (mediaG >= 170):
+            datosTemporal.append('alto')
+
+        if (mediaB <= 85):
+            datosTemporal.append('bajo')
+        if (mediaB > 85 and mediaB < 170):
+            datosTemporal.append('medio')
+        if (mediaB >= 170):
+            datosTemporal.append('alto')
+
+        if (desviacionR <= 28):
+            datosTemporal.append('bajo')
+        if (desviacionR > 28 and desviacionR < 50):
+            datosTemporal.append('medio')
+        if (desviacionR >= 50):
+            datosTemporal.append('alto')
+            
+        if (desviacionG <= 28):
+            datosTemporal.append('bajo')
+        if (desviacionG > 28 and desviacionG < 50):
+            datosTemporal.append('medio')
+        if (desviacionG >= 50):
+            datosTemporal.append('alto')
+
+        if (desviacionB <= 28):
+            datosTemporal.append('bajo')
+        if (desviacionB > 28 and desviacionB < 50):
+            datosTemporal.append('medio')
+        if (desviacionB >= 50):
+            datosTemporal.append('alto')
+        
+        if (energia <= 100000):
+            datosTemporal.append('bajo')
+        if (energia > 100000 and energia < 200000):
+            datosTemporal.append('medio')
+        if (energia >= 200000):
+            datosTemporal.append('alto')
+
+        if (contraste <= 0.030):
+            datosTemporal.append('bajo')
+        if (contraste > 0.030 and contraste < 0.045):
+            datosTemporal.append('medio')
+        if (contraste >= 0.045):
+            datosTemporal.append('alto')
+
+        if (variance <= 0.01672):
+            datosTemporal.append('bajo')
+        if (variance > 0.01672 and variance < 0.03249):
+            datosTemporal.append('medio')
+        if (variance >= 0.03249):
+            datosTemporal.append('alto')
+
+        #mascara amarilla
         datosTemporal.append('no incendio')
 
         datos.append(datosTemporal)
@@ -288,6 +424,9 @@ for i in range(0, len(dirOrig)):
         
         # Calcular la desviación estándar de los valores de píxeles
         desviacion = statistics.stdev(maskArray)
+        desviacionR = statistics.stdev(redHumo)
+        desviacionG = statistics.stdev(greenHumo)
+        desviacionB = statistics.stdev(blueHumo)
         
 
         # Calcular el contraste como el valor máximo menos el valor mínimo dividido por la desviación estándar
@@ -298,7 +437,7 @@ for i in range(0, len(dirOrig)):
         mediaG = statistics.mean(greenHumo)
         mediaB = statistics.mean(blueHumo)
 
-        if (colorMini > mediaR):
+        """if (colorMini > mediaR):
             colorMini = mediaR
         if (colorMini > mediaG):
             colorMini = mediaG
@@ -318,8 +457,12 @@ for i in range(0, len(dirOrig)):
             contrMini = contraste
         if (energMini > energia):
             energMini = energia
-        if (desviMini > desviacion):
-            desviMini = desviacion
+        if (desviMini > desviacionR):
+            desviMini = desviacionR
+        if (desviMini > desviacionG):
+            desviMini = desviacionG
+        if (desviMini > desviacionB):
+            desviMini = desviacionB
 
         if (variaMax < variance):
             variaMax = variance
@@ -327,17 +470,78 @@ for i in range(0, len(dirOrig)):
             contrMax = contraste
         if (energMax < energia):
             energMax = energia
-        if (desviMax < desviacion):
-            desviMax = desviacion
+        if (desviMax < desviacionR):
+            desviMax = desviacionR
+        if (desviMax < desviacionG):
+            desviMax = desviacionG
+        if (desviMax < desviacionB):
+            desviMax = desviacionB"""
 
         #guardamos datos
-        datosTemporal.append(mediaR)
-        datosTemporal.append(mediaG)
-        datosTemporal.append(mediaB)
-        datosTemporal.append(energia)
-        datosTemporal.append(desviacion)
-        datosTemporal.append(contraste)
-        datosTemporal.append(variance)
+        if (mediaR <= 85):
+            datosTemporal.append('bajo')
+        if (mediaR > 85 and mediaR < 170):
+            datosTemporal.append('medio')
+        if (mediaR >= 170):
+            datosTemporal.append('alto')
+            
+        if (mediaG <= 85):
+            datosTemporal.append('bajo')
+        if (mediaG > 85 and mediaG < 170):
+            datosTemporal.append('medio')
+        if (mediaG >= 170):
+            datosTemporal.append('alto')
+
+        if (mediaB <= 85):
+            datosTemporal.append('bajo')
+        if (mediaB > 85 and mediaB < 170):
+            datosTemporal.append('medio')
+        if (mediaB >= 170):
+            datosTemporal.append('alto')
+
+        if (desviacionR <= 28):
+            datosTemporal.append('bajo')
+        if (desviacionR > 28 and desviacionR < 50):
+            datosTemporal.append('medio')
+        if (desviacionR >= 50):
+            datosTemporal.append('alto')
+            
+        if (desviacionG <= 28):
+            datosTemporal.append('bajo')
+        if (desviacionG > 28 and desviacionG < 50):
+            datosTemporal.append('medio')
+        if (desviacionG >= 50):
+            datosTemporal.append('alto')
+
+        if (desviacionB <= 28):
+            datosTemporal.append('bajo')
+        if (desviacionB > 28 and desviacionB < 50):
+            datosTemporal.append('medio')
+        if (desviacionB >= 50):
+            datosTemporal.append('alto')
+        
+        if (energia <= 100000):
+            datosTemporal.append('bajo')
+        if (energia > 100000 and energia < 200000):
+            datosTemporal.append('medio')
+        if (energia >= 200000):
+            datosTemporal.append('alto')
+
+        if (contraste <= 0.030):
+            datosTemporal.append('bajo')
+        if (contraste > 0.030 and contraste < 0.045):
+            datosTemporal.append('medio')
+        if (contraste >= 0.045):
+            datosTemporal.append('alto')
+
+        if (variance <= 0.01672):
+            datosTemporal.append('bajo')
+        if (variance > 0.01672 and variance < 0.03249):
+            datosTemporal.append('medio')
+        if (variance >= 0.03249):
+            datosTemporal.append('alto')
+
+        #mascar verde
         datosTemporal.append('humo')
 
         datos.append(datosTemporal)
@@ -354,11 +558,11 @@ for i in range(0, len(dirOrig)):
         print("")
         """
 
-print("valores media del color : " + str(colorMax) + " " + str(colorMini))
+"""print("valores media del color : " + str(colorMax) + " " + str(colorMini))
 print("valores media del contraste : " + str(contrMax) + " " + str(contrMini))
 print("valores media del varianza : " + str(variaMax) + " " + str(variaMini))
 print("valores media del energia : " + str(energMax) + " " + str(energMini))
-print("valores media de la desviacion : " + str(desviMax) + " " + str(desviMini))
+print("valores media de la desviacion : " + str(desviMax) + " " + str(desviMini))"""
 # Creamos el archivo CSV
 with open('datos.csv', 'w', newline='') as f:
     writer = csv.writer(f)

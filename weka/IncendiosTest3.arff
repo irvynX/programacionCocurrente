@@ -1,0 +1,232 @@
+@relation datos-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C1-K5-P50.0-S1-weka.filters.supervised.instance.SMOTE-C2-K5-P50.0-S1-weka.filters.supervised.instance.SMOTE-C3-K5-P50.0-S1-weka.filters.supervised.instance.SMOTE-C2-K5-P50.0-S1-weka.filters.supervised.instance.SMOTE-C1-K5-P50.0-S1-weka.filters.unsupervised.instance.Randomize-S42-weka.filters.unsupervised.instance.Randomize-S42-weka.filters.unsupervised.instance.Randomize-S42-weka.filters.unsupervised.instance.Randomize-S42-weka.filters.supervised.instance.StratifiedRemoveFolds-S0-N3-F3
+
+@attribute mediaR {medio,bajo,alto}
+@attribute mediaG {medio,bajo,alto}
+@attribute mediaB {medio,bajo,alto}
+@attribute desvR {alto,medio,bajo}
+@attribute desvG {medio,bajo,alto}
+@attribute desvB {medio,bajo,alto}
+@attribute energia {bajo,medio,alto}
+@attribute contraste {bajo,medio,alto}
+@attribute varianza {alto,medio,bajo}
+@attribute clasificador {incendio,'no incendio',humo}
+
+@data
+medio,medio,bajo,medio,medio,medio,bajo,bajo,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,'no incendio'
+medio,medio,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,alto,bajo,'no incendio'
+bajo,bajo,bajo,medio,bajo,bajo,bajo,bajo,bajo,'no incendio'
+bajo,bajo,bajo,medio,bajo,bajo,bajo,alto,bajo,'no incendio'
+medio,bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,bajo,bajo,bajo,medio,'no incendio'
+bajo,bajo,bajo,medio,bajo,bajo,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,alto,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,alto,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,bajo,medio,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+medio,bajo,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,bajo,bajo,bajo,alto,bajo,'no incendio'
+medio,medio,bajo,medio,medio,bajo,bajo,bajo,bajo,'no incendio'
+medio,medio,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+medio,medio,bajo,medio,medio,medio,bajo,bajo,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,alto,bajo,'no incendio'
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,alto,bajo,'no incendio'
+bajo,bajo,bajo,medio,bajo,bajo,bajo,alto,bajo,'no incendio'
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,'no incendio'
+medio,medio,bajo,medio,medio,medio,bajo,bajo,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,alto,bajo,'no incendio'
+medio,medio,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,bajo,bajo,'no incendio'
+bajo,bajo,bajo,medio,bajo,bajo,bajo,alto,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,'no incendio'
+medio,medio,bajo,medio,medio,medio,bajo,bajo,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+medio,medio,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,bajo,bajo,bajo,medio,bajo,'no incendio'
+bajo,medio,bajo,alto,medio,bajo,bajo,bajo,alto,'no incendio'
+medio,medio,bajo,medio,medio,medio,bajo,bajo,bajo,'no incendio'
+medio,medio,bajo,medio,medio,medio,bajo,bajo,bajo,'no incendio'
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,alto,bajo,'no incendio'
+medio,medio,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+medio,medio,bajo,medio,medio,medio,bajo,bajo,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,bajo,bajo,bajo,alto,bajo,'no incendio'
+bajo,bajo,bajo,medio,bajo,bajo,bajo,alto,bajo,'no incendio'
+medio,medio,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,bajo,bajo,bajo,medio,bajo,'no incendio'
+bajo,medio,bajo,alto,medio,bajo,bajo,bajo,alto,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,alto,bajo,'no incendio'
+bajo,bajo,bajo,medio,bajo,bajo,bajo,alto,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,bajo,bajo,bajo,medio,'no incendio'
+bajo,bajo,bajo,medio,medio,bajo,bajo,bajo,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,alto,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,alto,bajo,'no incendio'
+bajo,bajo,bajo,medio,bajo,bajo,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,bajo,bajo,bajo,alto,bajo,'no incendio'
+medio,medio,medio,medio,bajo,bajo,bajo,bajo,medio,'no incendio'
+bajo,bajo,bajo,medio,medio,bajo,bajo,bajo,medio,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,medio,bajo,'no incendio'
+bajo,bajo,bajo,medio,medio,medio,bajo,alto,bajo,'no incendio'
+alto,medio,alto,medio,medio,bajo,bajo,bajo,bajo,incendio
+alto,medio,bajo,alto,alto,medio,bajo,bajo,alto,incendio
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,incendio
+medio,medio,medio,alto,medio,medio,bajo,bajo,medio,incendio
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,incendio
+alto,medio,medio,bajo,bajo,bajo,bajo,bajo,bajo,incendio
+alto,medio,medio,medio,bajo,medio,bajo,bajo,bajo,incendio
+alto,medio,medio,medio,medio,bajo,bajo,bajo,bajo,incendio
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,incendio
+alto,alto,medio,medio,medio,bajo,bajo,bajo,bajo,incendio
+medio,medio,medio,alto,medio,medio,bajo,bajo,medio,incendio
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,incendio
+medio,medio,bajo,alto,medio,medio,bajo,bajo,medio,incendio
+bajo,bajo,bajo,medio,medio,medio,bajo,bajo,alto,incendio
+alto,medio,medio,alto,alto,medio,bajo,bajo,alto,incendio
+alto,medio,medio,medio,bajo,medio,bajo,bajo,bajo,incendio
+medio,medio,bajo,medio,medio,bajo,bajo,bajo,medio,incendio
+alto,medio,medio,medio,medio,medio,bajo,bajo,medio,incendio
+alto,medio,bajo,medio,medio,bajo,bajo,bajo,medio,incendio
+medio,bajo,bajo,medio,medio,medio,bajo,bajo,medio,incendio
+medio,medio,bajo,alto,medio,medio,bajo,bajo,medio,incendio
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,incendio
+alto,medio,medio,medio,medio,medio,bajo,bajo,medio,incendio
+alto,medio,medio,bajo,bajo,bajo,bajo,bajo,bajo,incendio
+medio,bajo,bajo,medio,medio,bajo,bajo,bajo,medio,incendio
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,incendio
+alto,medio,bajo,medio,medio,bajo,bajo,bajo,medio,incendio
+medio,medio,bajo,alto,medio,medio,bajo,bajo,medio,incendio
+alto,medio,medio,alto,alto,medio,bajo,bajo,alto,incendio
+medio,medio,medio,alto,medio,medio,bajo,bajo,alto,incendio
+alto,medio,medio,medio,medio,bajo,bajo,bajo,bajo,incendio
+medio,medio,medio,alto,medio,medio,bajo,bajo,medio,incendio
+medio,medio,medio,medio,medio,medio,bajo,bajo,bajo,incendio
+medio,medio,bajo,alto,medio,medio,bajo,bajo,medio,incendio
+alto,medio,medio,medio,medio,bajo,bajo,bajo,bajo,incendio
+alto,medio,medio,alto,alto,medio,bajo,bajo,alto,incendio
+alto,medio,medio,bajo,bajo,bajo,bajo,bajo,bajo,incendio
+bajo,bajo,bajo,medio,bajo,bajo,bajo,bajo,medio,incendio
+bajo,bajo,bajo,medio,bajo,bajo,bajo,bajo,medio,incendio
+alto,medio,medio,alto,alto,medio,bajo,bajo,alto,incendio
+medio,bajo,bajo,medio,medio,medio,bajo,bajo,medio,incendio
+medio,bajo,bajo,alto,bajo,bajo,bajo,bajo,bajo,incendio
+alto,medio,medio,medio,bajo,medio,bajo,bajo,bajo,incendio
+bajo,medio,medio,bajo,bajo,bajo,bajo,bajo,bajo,incendio
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,incendio
+medio,medio,medio,alto,medio,medio,bajo,bajo,medio,incendio
+alto,medio,medio,medio,medio,medio,bajo,bajo,medio,incendio
+alto,medio,bajo,medio,medio,bajo,bajo,bajo,medio,incendio
+alto,medio,bajo,medio,medio,medio,bajo,bajo,medio,incendio
+bajo,bajo,bajo,medio,bajo,bajo,bajo,bajo,medio,incendio
+medio,bajo,bajo,medio,bajo,bajo,bajo,bajo,bajo,incendio
+bajo,bajo,bajo,medio,bajo,bajo,bajo,bajo,medio,incendio
+medio,medio,bajo,alto,medio,medio,bajo,bajo,medio,incendio
+medio,medio,medio,alto,medio,medio,bajo,bajo,medio,incendio
+alto,medio,medio,alto,alto,medio,bajo,bajo,alto,incendio
+alto,medio,medio,medio,medio,bajo,bajo,bajo,medio,incendio
+alto,medio,bajo,alto,alto,medio,bajo,bajo,alto,incendio
+medio,bajo,bajo,alto,medio,bajo,bajo,bajo,medio,incendio
+alto,medio,bajo,medio,medio,bajo,bajo,bajo,medio,incendio
+alto,medio,medio,medio,medio,medio,bajo,bajo,medio,incendio
+medio,bajo,bajo,alto,medio,bajo,bajo,bajo,medio,incendio
+medio,bajo,bajo,medio,medio,medio,bajo,bajo,medio,incendio
+medio,bajo,bajo,alto,medio,bajo,bajo,bajo,medio,incendio
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,incendio
+medio,bajo,bajo,medio,medio,bajo,bajo,bajo,medio,incendio
+medio,bajo,bajo,alto,medio,bajo,bajo,bajo,medio,incendio
+alto,medio,medio,alto,alto,medio,bajo,bajo,alto,incendio
+medio,bajo,bajo,alto,medio,medio,bajo,bajo,medio,incendio
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,incendio
+medio,medio,medio,alto,medio,medio,bajo,bajo,alto,incendio
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,medio,humo
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,humo
+medio,medio,medio,bajo,bajo,bajo,bajo,bajo,bajo,humo
+medio,medio,medio,medio,medio,medio,medio,bajo,medio,humo
+bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,medio,humo
+medio,bajo,bajo,bajo,bajo,bajo,medio,bajo,medio,humo
+bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,medio,humo
+alto,alto,alto,bajo,bajo,bajo,bajo,bajo,bajo,humo
+alto,alto,alto,bajo,bajo,bajo,alto,medio,bajo,humo
+medio,bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,humo
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,humo
+bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,medio,humo
+medio,medio,bajo,medio,medio,bajo,bajo,bajo,medio,humo
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,medio,humo
+medio,bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,humo
+medio,medio,medio,bajo,bajo,bajo,bajo,bajo,bajo,humo
+alto,alto,alto,bajo,bajo,bajo,alto,medio,bajo,humo
+medio,medio,medio,medio,medio,medio,medio,bajo,medio,humo
+medio,bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,humo
+medio,medio,medio,bajo,bajo,bajo,medio,bajo,bajo,humo
+medio,medio,medio,bajo,bajo,medio,medio,bajo,medio,humo
+bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,medio,humo
+bajo,bajo,bajo,medio,medio,bajo,bajo,bajo,bajo,humo
+medio,bajo,bajo,bajo,bajo,bajo,bajo,alto,bajo,humo
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,humo
+alto,alto,alto,bajo,bajo,bajo,bajo,bajo,bajo,humo
+medio,medio,bajo,medio,medio,medio,bajo,bajo,medio,humo
+bajo,bajo,bajo,bajo,medio,bajo,medio,bajo,bajo,humo
+alto,medio,medio,medio,medio,medio,bajo,bajo,medio,humo
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,humo
+bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,medio,humo
+medio,medio,medio,medio,medio,medio,medio,bajo,bajo,humo
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,humo
+medio,medio,medio,alto,medio,medio,medio,bajo,medio,humo
+bajo,bajo,bajo,medio,medio,bajo,bajo,bajo,bajo,humo
+medio,medio,medio,medio,medio,medio,bajo,bajo,medio,humo
+alto,alto,alto,bajo,bajo,bajo,bajo,bajo,bajo,humo
+medio,bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,humo
+alto,alto,alto,bajo,bajo,bajo,medio,bajo,bajo,humo
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,medio,humo
+alto,alto,alto,bajo,bajo,bajo,bajo,bajo,bajo,humo
+medio,medio,medio,bajo,bajo,bajo,bajo,bajo,bajo,humo
+bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,medio,humo
+medio,medio,medio,bajo,bajo,bajo,bajo,bajo,bajo,humo
+medio,bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,humo
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,medio,humo
+medio,medio,medio,bajo,bajo,bajo,bajo,bajo,bajo,humo
+alto,alto,alto,bajo,bajo,bajo,medio,bajo,bajo,humo
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,humo
+medio,medio,bajo,alto,medio,medio,bajo,bajo,medio,humo
+alto,alto,alto,bajo,bajo,bajo,medio,bajo,bajo,humo
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,medio,humo
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,medio,humo
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,humo
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,humo
+medio,bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,humo
+bajo,bajo,bajo,medio,medio,medio,medio,bajo,medio,humo
+bajo,bajo,bajo,medio,bajo,bajo,bajo,bajo,medio,humo
+medio,medio,medio,medio,medio,medio,medio,bajo,bajo,humo
+bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,medio,humo
+bajo,bajo,bajo,bajo,bajo,bajo,alto,bajo,bajo,humo
+bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,medio,humo
+medio,medio,medio,bajo,bajo,bajo,bajo,bajo,bajo,humo
+medio,medio,bajo,medio,medio,medio,bajo,bajo,medio,humo
+medio,medio,medio,medio,medio,medio,bajo,bajo,bajo,humo
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,humo
+medio,medio,alto,bajo,bajo,bajo,bajo,bajo,bajo,humo
+bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,medio,humo
+alto,alto,alto,bajo,bajo,bajo,bajo,bajo,bajo,humo
+bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,bajo,humo
+alto,alto,alto,bajo,bajo,bajo,medio,bajo,bajo,humo
+bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,medio,humo
+bajo,bajo,bajo,bajo,bajo,bajo,medio,bajo,medio,humo
