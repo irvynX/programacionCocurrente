@@ -5,6 +5,7 @@ import numpy as np
 import os
 import csv
 
+#verde fuego, amarillo humo, rojo no incendio
 # Definir los atributos
 atributos = [('mediaRojo', 'REAL'),
              ('mediaVerde', 'REAL'),
@@ -240,8 +241,9 @@ for i in range(0, len(dirOrig)):
         if (variance >= 0.03249):
             datosTemporal.append('alto')
 
+
         #mascara roja
-        datosTemporal.append('humo')
+        datosTemporal.append('no incendio')
 
         datos.append(datosTemporal)
 
@@ -393,8 +395,9 @@ for i in range(0, len(dirOrig)):
         if (variance >= 0.03249):
             datosTemporal.append('alto')
 
+
         #mascara amarilla
-        datosTemporal.append('no incendio')
+        datosTemporal.append('humo')
 
         datos.append(datosTemporal)
         """
