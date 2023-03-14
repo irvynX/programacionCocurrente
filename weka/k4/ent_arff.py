@@ -8,9 +8,9 @@ from sklearn.preprocessing import LabelEncoder
 import arff
 from scipy.io import arff
 
-datatest = arff.loadarff('Test1.arff')
+datatest = arff.loadarff('datosSMOTERandomTest20.arff')
 dftest = pd.DataFrame(datatest[0])
-dataTraining = arff.loadarff('Training1.arff')
+dataTraining = arff.loadarff('datosSMOTERandomTraining80.arff')
 dfTraining = pd.DataFrame(dataTraining[0])
 
 # crear un objeto LabelEncoder
@@ -36,7 +36,7 @@ test_accuracy = []
 training_error = []
 test_error = []
 
-n_depth = range(1, 20)
+n_depth = range(1, 15)
 
 for depth in n_depth:
     #build the model

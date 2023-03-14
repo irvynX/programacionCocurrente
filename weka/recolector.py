@@ -7,16 +7,6 @@ import cv2
 import arff
 import csv
 
-# Definir los atributos
-atributos = [('mediaRojo', 'REAL'),
-             ('mediaVerde', 'REAL'),
-             ('mediaAzul', 'REAL'),
-             ('energia', 'REAL'),
-             ('desviación', 'REAL'),
-             ('contraste', 'REAL'),
-             ('varianza', 'REAL'),
-             ('class', ['incendio', 'humo', 'no incendio'])]
-
 datos = []
 datosTemporal = []
 
