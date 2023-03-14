@@ -8,9 +8,9 @@ from sklearn.preprocessing import LabelEncoder
 import arff
 from scipy.io import arff
 
-datatest = arff.loadarff('IncendiosTest3.arff')
+datatest = arff.loadarff('Test1.arff')
 dftest = pd.DataFrame(datatest[0])
-dataTraining = arff.loadarff('IncendiosTraining3.arff')
+dataTraining = arff.loadarff('Training1.arff')
 dfTraining = pd.DataFrame(dataTraining[0])
 
 # crear un objeto LabelEncoder
@@ -49,10 +49,12 @@ for depth in n_depth:
     #record generalization accuracy and error
     test_accuracy.append(clf.score(xtest, ytest))
     test_error.append(1.0 - clf.score(xtest, ytest))
-    print('test error: ', test_error,'training error: ', training_error)
+    print(depth - 1,' test error: ', test_error[depth - 1],'training error: ', training_error[depth - 1])
+    print('')
+    print('')
 
-plt.plot(n_depth, training_accuracy, label="training accuracy")
-plt.plot(n_depth, test_accuracy, label="test accuracy")
+plt.plot(n_depth, training_error, label="training error")
+plt.plot(n_depth, test_error, label="test error")
 plt.ylabel("Accuracy")
 plt.xlabel("n_depth")
 plt.legend()
