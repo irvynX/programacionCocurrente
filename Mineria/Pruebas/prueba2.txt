@@ -1,0 +1,47 @@
+depth:  1 training error:  0.5455357142857142 test error:  0.5607142857142857
+
+depth:  2 training error:  0.4732142857142857 test error:  0.5142857142857142
+
+depth:  3 training error:  0.46964285714285714 test error:  0.5107142857142857
+
+depth:  4 training error:  0.4303571428571429 test error:  0.4482142857142857
+
+depth:  5 training error:  0.36875 test error:  0.4214285714285714
+
+depth:  6 training error:  0.34285714285714286 test error:  0.37857142857142856
+
+depth:  7 training error:  0.32053571428571426 test error:  0.3482142857142857
+
+depth:  8 training error:  0.2830357142857143 test error:  0.3125
+
+depth:  9 training error:  0.2589285714285714 test error:  0.3053571428571429
+
+depth:  10 training error:  0.2366071428571429 test error:  0.2946428571428571
+
+depth:  11 training error:  0.22410714285714284 test error:  0.2857142857142857
+
+depth:  12 training error:  0.22053571428571428 test error:  0.2839285714285714
+
+depth:  13 training error:  0.22053571428571428 test error:  0.2839285714285714
+
+depth:  14 training error:  0.22053571428571428 test error:  0.2857142857142857
+
+depth:  15 training error:  0.22053571428571428 test error:  0.2875
+
+depth:  16 training error:  0.22053571428571428 test error:  0.2839285714285714
+
+depth:  17 training error:  0.22053571428571428 test error:  0.2839285714285714
+
+depth:  18 training error:  0.22053571428571428 test error:  0.2839285714285714
+
+depth:  19 training error:  0.22053571428571428 test error:  0.2839285714285714
+
+depth:  20 training error:  0.22053571428571428 test error:  0.2839285714285714
+
+depth:  21 training error:  0.22053571428571428 test error:  0.2839285714285714
+
+depth:  22 training error:  0.22053571428571428 test error:  0.2839285714285714
+
+depth:  23 training error:  0.22053571428571428 test error:  0.2839285714285714
+
+depth:  24 training error:  0.22053571428571428 test error:  0.2839285714285714
