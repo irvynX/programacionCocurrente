@@ -8,9 +8,9 @@ from sklearn.preprocessing import LabelEncoder
 import arff
 from scipy.io import arff
 
-datatest = arff.loadarff('IncendiosTest3.arff')
+datatest = arff.loadarff('IncendiosTest1.arff')
 dftest = pd.DataFrame(datatest[0])
-dataTraining = arff.loadarff('IncendiosTraining3.arff')
+dataTraining = arff.loadarff('IncendiosTraining1.arff')
 dfTraining = pd.DataFrame(dataTraining[0])
 
 # crear un objeto LabelEncoder
