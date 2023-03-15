@@ -1,7 +1,6 @@
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
-import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import scipy as sp
@@ -9,11 +8,10 @@ from sklearn.preprocessing import LabelEncoder
 import arff
 from scipy.io import arff
 
-datatest = arff.loadarff('Test1.arff')
+datatest = arff.loadarff('datosSMOTERandomTest20.arff')
 dftest = pd.DataFrame(datatest[0])
-dataTraining = arff.loadarff('Training1.arff')
+dataTraining = arff.loadarff('datosSMOTERandomTraining80.arff')
 dfTraining = pd.DataFrame(dataTraining[0])
-
 
 # crear un objeto LabelEncoder
 letest = LabelEncoder()
@@ -38,7 +36,7 @@ test_accuracy = []
 training_error = []
 test_error = []
 
-n_depth = range(1, 25)
+n_depth = range(1, 15)
 
 for depth in n_depth:
     #build the model
@@ -51,21 +49,13 @@ for depth in n_depth:
     #record generalization accuracy and error
     test_accuracy.append(clf.score(xtest, ytest))
     test_error.append(1.0 - clf.score(xtest, ytest))
-    print('depth: ', depth,'training error: ',training_error[-1], 'test error: ',test_error[-1])
-    print()
-
-
-
-plt.plot(n_depth, training_accuracy, label="training accuracy")
-plt.plot(n_depth, test_accuracy, label="test accuracy")
-plt.ylabel("Accuracy")
-plt.xlabel("n_depth")
-plt.legend()
-plt.show()
+    print(depth - 1,' test error: ', test_error[depth - 1],'training error: ', training_error[depth - 1])
+    print('')
+    print('')
 
 plt.plot(n_depth, training_error, label="training error")
 plt.plot(n_depth, test_error, label="test error")
-plt.ylabel("Error")
+plt.ylabel("Accuracy")
 plt.xlabel("n_depth")
 plt.legend()
 plt.show()
