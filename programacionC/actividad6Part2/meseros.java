@@ -12,8 +12,8 @@ public class meseros extends Thread{
     
     @Override
     public void run() {
-        mostrarMenuC();
-        mostrarMenuB();
+        c.cambiar(idMesero,0,m.precioC[0],false);
+        c.revisar(idMesero, 0);
     }
 
 
