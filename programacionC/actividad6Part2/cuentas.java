@@ -38,7 +38,7 @@ public class cuentas{
         System.out.println("el mesero" + idM + " esta modificando una cuenta");
         modificarCuenta(idC,cantidad,pagar);
         System.out.println("el mesero" + idM + " termino de revisar las cuentas");
-        revisandoCuentas = false;
+        modificandoCuentas = false;
         notifyAll();
     }
 
@@ -50,10 +50,7 @@ public class cuentas{
 
     public synchronized void modificarCuenta(int idc,float cuentaC, boolean pagar){
         if (pagar == true) {
-            cuentas[idc] = cuentas[idc] - cuentaC;
-            if (cuentas[idc] < 0) {
-                cuentas[idc] = 0;
-            }
+            cuentas[idc] = 0;
         }else{
             cuentas[idc] = cuentas[idc] + cuentaC;  
         }

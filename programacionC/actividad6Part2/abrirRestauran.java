@@ -2,13 +2,20 @@ package actividad6Part2;
 
 public class abrirRestauran {
     public static void main(String[] args) {
-        menu menu = new menu();
+        int num = 2;
+        //hilos
+        meseros meseros[] = new meseros[num];
+        cliente clientes[] = new cliente[num];
+        // objetos sincronos
         cuentas cuentas = new cuentas();
-        meseros mPrueba[] = new meseros[7];
+        menu menu = new menu();
+        organizacionRestauran or = new organizacionRestauran();
 
-        for (int i = 0; i < mPrueba.length; i++) {
-            mPrueba[i] = new meseros(i, cuentas, menu);
-            mPrueba[i].start();
+        for (int i = 0; i < num; i++) {
+            meseros[i] = new meseros(i, cuentas, menu, or);
+            meseros[i].start();
+            clientes[i] = new cliente(i, cuentas, or);
+            clientes[i].start();
         }
     }
 }
