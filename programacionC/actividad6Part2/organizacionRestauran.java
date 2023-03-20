@@ -11,6 +11,7 @@ public class organizacionRestauran {
     private boolean restauranAbierto = true;
     // crea las esperas
     private boolean llamar = false;
+    private boolean llamandoMesero = false;
     //pedido pendientes
     public boolean comida = false;
     public int numPedido = 100;
@@ -18,7 +19,7 @@ public class organizacionRestauran {
     public boolean pedido = false;
 
     public synchronized void llamarMesero(int idC){
-        while (llamar == true) {
+        while (llamar == true || llamandoMesero == true) {
             try {
                 System.out.println("el cliente " + idC + " esta esperando para llamar a un mesero");
                 wait();
@@ -27,14 +28,9 @@ public class organizacionRestauran {
             }
         }
         llamar = true;
+        llamandoMesero = true;
         System.out.println("cliente " + idC + ": llama a un mesero");
         cliente[idC] = 1;
-        try {
-            System.out.println("el cliente " + idC + " esta esperando a un mesero");
-            wait();
-        } catch (Exception e) {
-            System.out.println(e);
-        }
         llamar = false;
         notifyAll();
     }
@@ -76,6 +72,7 @@ public class organizacionRestauran {
         llamar = true;
         int temp = cliente[idC];
         llamar = false;
+        llamandoMesero = false;
         notifyAll();
         return temp;
     }

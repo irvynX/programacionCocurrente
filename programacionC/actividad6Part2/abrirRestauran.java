@@ -12,8 +12,8 @@ public class abrirRestauran {
         organizacionRestauran or = new organizacionRestauran();
 
         for (int i = 0; i < num; i++) {
-            meseros[i] = new meseros(i, cuentas, menu, or);
-            meseros[i].start();
+            //meseros[i] = new meseros(i, cuentas, menu, or);
+            //meseros[i].start();
             clientes[i] = new cliente(i, cuentas, or);
             clientes[i].start();
         }
