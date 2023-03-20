@@ -5,10 +5,8 @@ public class organizacionRestauran {
     private int cliente [] = {100,100,100,100,100,100,100};
     //representa que mesero atiende a cada cliente
     private int llamarMesero [] = {100,100,100,100,100,100,100};
-    //plato a oredenar
-    private int ordenar [] = {100,100,100,100,100,100,100};
-    // mientras este en true el progra funciona
-    private boolean restauranAbierto = true;
+    //numero de clientes
+    private int numClientes = 100;
     // crea las esperas
     private boolean llamar = false;
     private boolean llamandoMesero = false;
@@ -18,10 +16,14 @@ public class organizacionRestauran {
     public int ordenAlMesero = 100;
     public boolean pedido = false;
 
+    public organizacionRestauran(int numC) {
+        numClientes = numC;
+    }
+
     public synchronized void llamarMesero(int idC){
         while (llamar == true || llamandoMesero == true) {
             try {
-                System.out.println("el cliente " + idC + " esta esperando para llamar a un mesero");
+                //System.out.println("el cliente " + idC + " esta esperando para llamar a un mesero");
                 wait();
             } catch (Exception e) {
                 System.out.println(e);
@@ -33,30 +35,38 @@ public class organizacionRestauran {
         cliente[idC] = 1;
         llamar = false;
         notifyAll();
+        try {
+            wait();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
     public synchronized void meseroObservando(int idM){
-        while (llamar == false) {
+        while (llamar == true) {
             try {
-                System.out.println("el mesero " + idM + " esta esperando para ver");
-                wait();
+                Thread.sleep(1000);
             } catch (Exception e) {
                 System.out.println(e);
             }
         }
-        int temp = 100;
-        for (int i = 0; i < cliente.length; i++) {
-            if (cliente[i] == 1) {
-                temp = i;
+        if (llamandoMesero == true) {
+            llamar = true;
+            int temp = 100;
+            for (int i = 0; i < cliente.length; i++) {
+                if (cliente[i] == 1) {
+                    temp = i;
+                }
             }
-        }
-        if (temp == 100) {
-            System.out.println("ningun cliente llama");
-        }else{
-            System.out.println("cliente " + temp + ": llama a un mesero");
-            cliente[temp] = 2;
-            llamarMesero[temp] = idM;
-            System.out.println("mesero " + idM + ": sera un gusto atenderlo");
+            if (temp == 100) {
+                System.out.println("\t\t\t\t\t\tningun cliente llama");
+            }else{
+                cliente[temp] = 2;
+                llamarMesero[temp] = idM;
+                System.out.println("\t\t\t\t\t\tmesero " + idM + ": sera un gusto atenderlo cliente " + temp);
+            }
+            llamandoMesero = false;
+            llamar = false;
         }
         notifyAll();
     }
@@ -101,7 +111,7 @@ public class organizacionRestauran {
             }
         }
         llamar = true;
-        int temp = 0;
+        int temp = 100;
         for (int i = 0; i < llamarMesero.length; i++) {
             if (llamarMesero[i] == idM) {
                 temp = i;
@@ -126,12 +136,13 @@ public class organizacionRestauran {
         pedido = true;
         ordenAlMesero = idM;
         llamar = false;
+        notifyAll();
     }
 
     public synchronized boolean pedido(int idM){
         while (llamar == true) {
             try {
-                wait();
+                Thread.sleep(100);
             } catch (Exception e) {
                 System.out.println(e);
             }
@@ -142,7 +153,50 @@ public class organizacionRestauran {
             temp = true;
         }
         llamar = false;
-        notifyAll();
         return temp;
+    }
+
+    public synchronized void ordenCompleta(int idM,int idC){
+        while (llamar == true) {
+            try {
+                wait();
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+        llamar = true;
+        System.out.println("\t\t\t\t\t\tmesero " + idM + " apunto la orden del cliente " + idC);
+        ordenAlMesero = 100;
+        pedido = false;
+        llamar = false;
+        notifyAll();
+    }
+
+    public synchronized void salir(){
+        while (llamar == true) {
+            try {
+                Thread.sleep(100);
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+        llamar = true;
+        numClientes--;
+        llamar = false;
+        notifyAll();
+    }
+
+    public synchronized int numClientes(){
+        while (llamar == true) {
+            try {
+                wait();
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+        llamar = true;
+        llamar = false;
+        notifyAll();
+        return numClientes;
     }
 }

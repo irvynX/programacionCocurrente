@@ -15,16 +15,22 @@ public class meseros extends Thread{
     
     @Override
     public void run() {
+        System.out.println("\t\t\t\t\t\tMesero " + idMesero + ": listo para trabajar");
         while (true) {
+            if (or.numClientes() == 0) {
+                break;
+            }
             if (miCliente == 100) {
                 or.meseroObservando(idMesero);
                 miCliente = or.miCliente(idMesero);
             }else{
-                if(or.pedido == true && or.pedido(idMesero)){
+                if(or.pedido(idMesero)){
                     if (or.comida == true) {
                         c.cambiar(idMesero, miCliente, m.precioC[or.numPedido], false);
+                        or.ordenCompleta(idMesero, miCliente);
                     }else{
                         c.cambiar(idMesero, miCliente, m.precioB[or.numPedido], false);
+                        or.ordenCompleta(idMesero, miCliente);
                     }
                 }
             }
