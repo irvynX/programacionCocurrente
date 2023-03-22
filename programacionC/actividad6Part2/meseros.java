@@ -1,5 +1,3 @@
-package actividad6Part2;
-
 public class meseros extends Thread{
     private int idMesero;
     private cuentas c;

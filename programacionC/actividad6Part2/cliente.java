@@ -1,4 +1,3 @@
-package actividad6Part2;
 import java.util.Random;
 
 public class cliente extends Thread{

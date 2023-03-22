@@ -1,5 +1,3 @@
-package actividad6Part2;
-
 public class menu {
     public float[] precioB = {10,15,12,8};
     public float[] precioC = {50,60,70,30};

@@ -1,5 +1,3 @@
-package actividad6Part2;
-
 public class abrirRestauran {
     public static void main(String[] args) {
         int num = 2;

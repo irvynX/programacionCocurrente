@@ -1,5 +1,3 @@
-package actividad6Part2;
-
 public class cuentas{
     private float[] cuentas = {0,0,0,0,0,0,0,0,0,0};
     private boolean revisandoCuentas = false;

@@ -1,5 +1,3 @@
-package actividad6Part2;
-
 public class organizacionRestauran {
     //0=inicio, 1=llamar mesero, 2=ordenar, 3=pagar
     private int cliente [] = {100,100,100,100,100,100,100};
