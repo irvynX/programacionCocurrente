@@ -1,0 +1,25 @@
+Para comenzar descargue el Compilador Arduino IDE, el link acá abajo.
+
+https://www.arduino.cc/download_handler.php?f=/arduino-1.8.9-windows.exe
+
+una vez descargado instálelo en su computadora
+
+También necesitará la biblioteca Adafruit_NeoPixel para que la secuencia de comandos funcione incluida en mi carpeta principal, copie y pegue la carpeta "Adafruit_NeoPixel-master"  y la carpeta "FastLED-master" en    C:\Program Files (x86)\Arduino\libraries     ""dentro de libraries pega las carpetas""
+
+Una vez terminado de armar el diagrama de Arduino y sus respectivas conexiones y los potenciometros a la mitad de su recorrido abra arduino y conecte su arduino mediante su cable USB a su computadora
+en el menú de Arduino IDE valla a la pestaña herramientas y luego a  "Placa:" y seleccione una, "ejemplo, si a comprado Arduino UNO seleccione la respectiva tarjeta 
+"Arduino/Genuino UNO" si ha comprado Arduino Micro, seleccione Arduino Micro en el menú.
+
+En la misma pestaña de "Herramientas:" seleccione "Puerto: y luego seleccione el puerto corespondiente al que esté conectado su arduino, en mi caso, tengo la placa Arduino/Genuino Micro en el Puerto:"COM17 (Arduino/Genuino Micro)"
+
+Una vez hecho los ajustes abra la carpeta "Vumetro19.12" y ejecute el archivo con el mismo nombre y extensión "Vumetro19.12.ino"
+
+Con arduino conectado  al puerto USB de tu computadora y cargado el archivo Vumetro19.12 
+
+Ejemplo para conectar cierta cantidad de leds segun los que tenga o valla a conectar=
+Busque en el codigo  "int stripNumOfLeds = 64;"  donde 64 corresponde a cuantos leds tienes conectados, es importante, si conectas 30 leds allí debes poner ese número
+en la línea de código  "uint32_t stripColor[65];"  debes poner un numero mas del total de leds para que el código funcione
+
+
+valla al menu de pestañas y de click al icono de una flecha apuntando hacia la derecha para cargar el programa a su Arduino o presione en su teclado CTRL + U , una vez cargado se encenderán al inicio las tiras leds en colores, "es hora de probar, ya teniendo todo conectado a como el diagrama indica ponga su música preferida y valla subiendo el volumen, los LEDs deben moverse al ritmo de la música, eso es todo, puede armar un gabinete donde poner todo, alguna duda contactame 
+www.facebook.com/ChiquilloSubnormal19
