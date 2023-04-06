@@ -1,0 +1,126 @@
+xst -intstyle ise -ifn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.xst" -ofn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.syr" 
+netgen -intstyle ise -ar Structure -tm reloj -w -dir netgen/synthesis -ofmt vhdl -sim reloj.ngc reloj_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc7a100t-csg324-3 "reloj.ngc" reloj.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o reloj_map.ncd reloj.ngd reloj.pcf 
+par -w -intstyle ise -ol high -mt off reloj_map.ncd reloj.ncd reloj.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reloj.twx reloj.ncd -o reloj.twr reloj.pcf -ucf pines.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc7a100t-csg324-3 "reloj.ngc" reloj.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o reloj_map.ncd reloj.ngd reloj.pcf 
+par -w -intstyle ise -ol high -mt off reloj_map.ncd reloj.ncd reloj.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reloj.twx reloj.ncd -o reloj.twr reloj.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f reloj.ut reloj.ncd 
+xst -intstyle ise -ifn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.xst" -ofn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.syr" 
+netgen -intstyle ise -ar Structure -tm reloj -w -dir netgen/synthesis -ofmt vhdl -sim reloj.ngc reloj_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc7a100t-csg324-3 "reloj.ngc" reloj.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o reloj_map.ncd reloj.ngd reloj.pcf 
+par -w -intstyle ise -ol high -mt off reloj_map.ncd reloj.ncd reloj.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reloj.twx reloj.ncd -o reloj.twr reloj.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f reloj.ut reloj.ncd 
+xst -intstyle ise -ifn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.xst" -ofn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.syr" 
+netgen -intstyle ise -ar Structure -tm reloj -w -dir netgen/synthesis -ofmt vhdl -sim reloj.ngc reloj_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc7a100t-csg324-3 "reloj.ngc" reloj.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o reloj_map.ncd reloj.ngd reloj.pcf 
+par -w -intstyle ise -ol high -mt off reloj_map.ncd reloj.ncd reloj.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reloj.twx reloj.ncd -o reloj.twr reloj.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f reloj.ut reloj.ncd 
+xst -intstyle ise -ifn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.xst" -ofn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.syr" 
+netgen -intstyle ise -ar Structure -tm reloj -w -dir netgen/synthesis -ofmt vhdl -sim reloj.ngc reloj_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc7a100t-csg324-3 "reloj.ngc" reloj.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o reloj_map.ncd reloj.ngd reloj.pcf 
+par -w -intstyle ise -ol high -mt off reloj_map.ncd reloj.ncd reloj.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reloj.twx reloj.ncd -o reloj.twr reloj.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f reloj.ut reloj.ncd 
+xst -intstyle ise -ifn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.xst" -ofn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.syr" 
+netgen -intstyle ise -ar Structure -tm reloj -w -dir netgen/synthesis -ofmt vhdl -sim reloj.ngc reloj_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc7a100t-csg324-3 "reloj.ngc" reloj.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o reloj_map.ncd reloj.ngd reloj.pcf 
+par -w -intstyle ise -ol high -mt off reloj_map.ncd reloj.ncd reloj.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reloj.twx reloj.ncd -o reloj.twr reloj.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f reloj.ut reloj.ncd 
+xst -intstyle ise -ifn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.xst" -ofn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.syr" 
+netgen -intstyle ise -ar Structure -tm reloj -w -dir netgen/synthesis -ofmt vhdl -sim reloj.ngc reloj_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc7a100t-csg324-3 "reloj.ngc" reloj.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o reloj_map.ncd reloj.ngd reloj.pcf 
+par -w -intstyle ise -ol high -mt off reloj_map.ncd reloj.ncd reloj.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reloj.twx reloj.ncd -o reloj.twr reloj.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f reloj.ut reloj.ncd 
+xst -intstyle ise -ifn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.xst" -ofn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.syr" 
+netgen -intstyle ise -ar Structure -tm reloj -w -dir netgen/synthesis -ofmt vhdl -sim reloj.ngc reloj_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc7a100t-csg324-3 "reloj.ngc" reloj.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o reloj_map.ncd reloj.ngd reloj.pcf 
+par -w -intstyle ise -ol high -mt off reloj_map.ncd reloj.ncd reloj.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reloj.twx reloj.ncd -o reloj.twr reloj.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f reloj.ut reloj.ncd 
+xst -intstyle ise -ifn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.xst" -ofn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.syr" 
+netgen -intstyle ise -ar Structure -tm reloj -w -dir netgen/synthesis -ofmt vhdl -sim reloj.ngc reloj_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc7a100t-csg324-3 "reloj.ngc" reloj.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o reloj_map.ncd reloj.ngd reloj.pcf 
+par -w -intstyle ise -ol high -mt off reloj_map.ncd reloj.ncd reloj.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reloj.twx reloj.ncd -o reloj.twr reloj.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f reloj.ut reloj.ncd 
+netgen -intstyle ise -ar Structure -tm reloj -w -dir netgen/synthesis -ofmt vhdl -sim reloj.ngc reloj_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc7a100t-csg324-3 "reloj.ngc" reloj.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o reloj_map.ncd reloj.ngd reloj.pcf 
+par -w -intstyle ise -ol high -mt off reloj_map.ncd reloj.ncd reloj.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reloj.twx reloj.ncd -o reloj.twr reloj.pcf -ucf pines.ucf 
+netgen -intstyle ise -ar Structure -tm reloj -w -dir netgen/synthesis -ofmt vhdl -sim reloj.ngc reloj_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc7a100t-csg324-3 "reloj.ngc" reloj.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o reloj_map.ncd reloj.ngd reloj.pcf 
+par -w -intstyle ise -ol high -mt off reloj_map.ncd reloj.ncd reloj.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reloj.twx reloj.ncd -o reloj.twr reloj.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f reloj.ut reloj.ncd 
+netgen -intstyle ise -ar Structure -tm reloj -w -dir netgen/synthesis -ofmt vhdl -sim reloj.ngc reloj_synthesis.vhd 
+xst -intstyle ise -ifn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.xst" -ofn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.syr" 
+netgen -intstyle ise -ar Structure -tm reloj -w -dir netgen/synthesis -ofmt vhdl -sim reloj.ngc reloj_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc7a100t-csg324-3 "reloj.ngc" reloj.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o reloj_map.ncd reloj.ngd reloj.pcf 
+par -w -intstyle ise -ol high -mt off reloj_map.ncd reloj.ncd reloj.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reloj.twx reloj.ncd -o reloj.twr reloj.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f reloj.ut reloj.ncd 
+xst -intstyle ise -ifn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.xst" -ofn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.syr" 
+netgen -intstyle ise -ar Structure -tm reloj -w -dir netgen/synthesis -ofmt vhdl -sim reloj.ngc reloj_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc7a100t-csg324-3 "reloj.ngc" reloj.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o reloj_map.ncd reloj.ngd reloj.pcf 
+par -w -intstyle ise -ol high -mt off reloj_map.ncd reloj.ncd reloj.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reloj.twx reloj.ncd -o reloj.twr reloj.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f reloj.ut reloj.ncd 
+xst -intstyle ise -ifn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.xst" -ofn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.syr" 
+netgen -intstyle ise -ar Structure -tm reloj -w -dir netgen/synthesis -ofmt vhdl -sim reloj.ngc reloj_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc7a100t-csg324-3 "reloj.ngc" reloj.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o reloj_map.ncd reloj.ngd reloj.pcf 
+par -w -intstyle ise -ol high -mt off reloj_map.ncd reloj.ncd reloj.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reloj.twx reloj.ncd -o reloj.twr reloj.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f reloj.ut reloj.ncd 
+xst -intstyle ise -ifn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.xst" -ofn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.syr" 
+netgen -intstyle ise -ar Structure -tm reloj -w -dir netgen/synthesis -ofmt vhdl -sim reloj.ngc reloj_synthesis.vhd 
+xst -intstyle ise -ifn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.xst" -ofn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.syr" 
+netgen -intstyle ise -ar Structure -tm reloj -w -dir netgen/synthesis -ofmt vhdl -sim reloj.ngc reloj_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc7a100t-csg324-3 "reloj.ngc" reloj.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o reloj_map.ncd reloj.ngd reloj.pcf 
+par -w -intstyle ise -ol high -mt off reloj_map.ncd reloj.ncd reloj.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reloj.twx reloj.ncd -o reloj.twr reloj.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f reloj.ut reloj.ncd 
+xst -intstyle ise -ifn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.xst" -ofn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.syr" 
+netgen -intstyle ise -ar Structure -tm reloj -w -dir netgen/synthesis -ofmt vhdl -sim reloj.ngc reloj_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc7a100t-csg324-3 "reloj.ngc" reloj.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o reloj_map.ncd reloj.ngd reloj.pcf 
+par -w -intstyle ise -ol high -mt off reloj_map.ncd reloj.ncd reloj.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reloj.twx reloj.ncd -o reloj.twr reloj.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f reloj.ut reloj.ncd 
+xst -intstyle ise -ifn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.xst" -ofn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.syr" 
+netgen -intstyle ise -ar Structure -tm reloj -w -dir netgen/synthesis -ofmt vhdl -sim reloj.ngc reloj_synthesis.vhd 
+xst -intstyle ise -ifn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.xst" -ofn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.syr" 
+netgen -intstyle ise -ar Structure -tm reloj -w -dir netgen/synthesis -ofmt vhdl -sim reloj.ngc reloj_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc7a100t-csg324-3 "reloj.ngc" reloj.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o reloj_map.ncd reloj.ngd reloj.pcf 
+par -w -intstyle ise -ol high -mt off reloj_map.ncd reloj.ncd reloj.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reloj.twx reloj.ncd -o reloj.twr reloj.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f reloj.ut reloj.ncd 
+xst -intstyle ise -ifn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.xst" -ofn "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc7a100t-csg324-3 "reloj.ngc" reloj.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o reloj_map.ncd reloj.ngd reloj.pcf 
+netgen -intstyle ise -ar Structure -tm reloj -w -dir netgen/synthesis -ofmt vhdl -sim reloj.ngc reloj_synthesis.vhd 
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o reloj_map.ncd reloj.ngd reloj.pcf 
+par -w -intstyle ise -ol high -mt off reloj_map.ncd reloj.ncd reloj.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reloj.twx reloj.ncd -o reloj.twr reloj.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f reloj.ut reloj.ncd 

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj_isim_beh.exe" -prj "C:/Users/Santiago/Documents/ISE DESIGN/relojV3/reloj_beh.prj" "work.reloj" 

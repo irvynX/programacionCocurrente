@@ -1,0 +1,52 @@
+## Señal del reloj
+NET 'clk' LOC = 'E3' | IOSTANDARD = 'LVTTL';  #PIN PARA EL RELOJ
+
+#Net 'clk' TNM_NET = sys_clk_pin;
+#TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100000 kHz;
+
+ 
+## Display 7 segmentos
+NET 'segmento(0)' LOC = 'T10' | IOSTANDARD = LVTTL;   
+NET 'segmento(1)' LOC = 'R10' | IOSTANDARD = LVTTL;   
+NET 'segmento(2)' LOC = 'K16' | IOSTANDARD = LVTTL;   
+NET 'segmento(3)' LOC = 'K13' | IOSTANDARD = LVTTL;   
+NET 'segmento(4)' LOC = 'P15' | IOSTANDARD = LVTTL;  
+NET 'segmento(5)' LOC = 'T11' | IOSTANDARD = LVTTL;   
+NET 'segmento(6)' LOC = 'L18' | IOSTANDARD = LVTTL;   
+NET 'segmento(7)' LOC = 'H15' | IOSTANDARD = LVTTL;   
+ 
+NET 'anodo(0)' LOC = 'J17' | IOSTANDARD = LVTTL;   
+NET 'anodo(1)' LOC = 'J18' | IOSTANDARD = LVTTL;   
+NET 'anodo(2)' LOC = 'T9' | IOSTANDARD = LVTTL;   
+NET 'anodo(3)' LOC = 'J14' | IOSTANDARD = LVTTL;   
+ 
+## Leds
+
+## Estos leds representan el tick-tack de un reloj, es decir los segundos
+NET 'Led(0)' LOC = 'H17' | IOSTANDARD = LVTTL;   
+NET 'Led(1)' LOC = 'K15' | IOSTANDARD = LVTTL;   
+
+## Conforme pasa el tiempo, empezando con U16 los leds comienza a encenderse, cuando encienda el ulitmo
+## led, indicara que el minuto incrementa en 1 y se vuelven a apagar.
+NET 'Led(2)' LOC = 'J13' | IOSTANDARD = LVTTL;
+NET 'Led(3)' LOC = 'N14' | IOSTANDARD = LVTTL;   
+NET 'Led(4)' LOC = 'R18' | IOSTANDARD = LVTTL;   
+NET 'Led(5)' LOC = 'V17' | IOSTANDARD = LVTTL;   
+NET 'Led(6)' LOC = 'U17' | IOSTANDARD = LVTTL;   
+NET 'Led(7)' LOC = 'U16' | IOSTANDARD = LVTTL;   
+
+## Al activarlo (ponerlo en 1) se detiene el tiempo (segundos). Pero se pueden ajustar horas y minutos.
+## Switches
+NET 'stop' LOC = 'J15' | IOSTANDARD = LVTTL;  
+
+## Alarma
+NET 'alarma' LOC = 'V11' | IOSTANDARD = LVTTL; 
+ 
+## Botones:
+##	izquierda: incrementa horas, derecha: incrementa minutos
+## centr0: reinicia alarma, arriba: activa alarma
+NET 'btnIzq' LOC = 'P17'  | IOSTANDARD = LVTTL;   
+NET 'btnDer' LOC = 'M17'  | IOSTANDARD = LVTTL; 
+NET 'btnRst' LOC = 'N17'  | IOSTANDARD = LVTTL;  
+NET 'btnAlarma' LOC = 'M18' | IOSTANDARD = LVTTL;
+ 

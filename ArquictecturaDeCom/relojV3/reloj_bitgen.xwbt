@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Santiago\Documents\ISE DESIGN\relojV3\reloj.ncd
+OUTFILE=C:\Users\Santiago\Documents\ISE DESIGN\relojV3\reloj.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=C:\Users\Santiago\Documents\ISE DESIGN\relojV3
+LICENSE=WebPack
+USER_INFO=212518471_0_0_458

@@ -15,17 +15,17 @@ begin
     process(input)
     begin
         case input is
-            when "0000" => output <= "0000001";
-            when "0001" => output <= "1001111";
-            when "0010" => output <= "0010010";
-            when "0011" => output <= "0000110";
-            when "0100" => output <= "1001100";
-            when "0101" => output <= "0100100";
-            when "0110" => output <= "0100000";
-            when "0111" => output <= "0001111";
-            when "1000" => output <= "0000000";
-            when "1001" => output <= "0000100";
-            when others => output <= "1111111";
+            when "0000" => output <= "1111110";
+            when "0001" => output <= "0110000";
+            when "0010" => output <= "1101101";
+            when "0011" => output <= "1111001";
+            when "0100" => output <= "0110011";
+            when "0101" => output <= "1011011";
+            when "0110" => output <= "1011111";
+            when "0111" => output <= "1110000";
+            when "1000" => output <= "1111111";
+            when "1001" => output <= "1110011";
+            when others => output <= "0000000";
         end case;
     end process;
 
