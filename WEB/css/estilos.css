@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: initial;
+    color: initial;
+}
+
+.logoNombre{
+    display:contents;
+}
+
+.logoNombre img{
+    margin-right: 10%;
+    width: 50px;
+    height: 50px;
+}
+
+.logoNombre p{
+    padding-top: 11%;
+    position: absolute;
+    left: 500; /* Posición inicial del objeto */
+    top: 0;
+    transition: transform 1s ease;
+}
